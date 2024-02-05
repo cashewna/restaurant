@@ -1,15 +1,4 @@
-# 🚀 Welcome to your new awesome project!
+# Restaurant
+Practice Javascript fundamentals by dynamically generating a restaurant site
+using webpack to bundle files from src to dist.
 
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
