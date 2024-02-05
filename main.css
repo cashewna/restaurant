@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    --50: #f8fafc;
+    --100: #f1f5f9;
+    --200: #e2e8f0;
+    --300: #cbd5e1;
+    --400: #94a3b8;
+    --500: #64748b;
+    --600: #475569;
+    --700: #334155;
+    --800: #1e293b;
+    --900: #0f172a;
+    --950: #020617;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: var(--500);
+    color: var(--50);
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: var(--600);
+    }
+}
+
+header {
+    padding: 1rem;
+    background-color: var(--950);
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+#content {
+    padding: 2rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    
+    .store-intro,
+    .opening-hours {
+        color: var(--50);
+    }
+}
