@@ -1,6 +1,6 @@
 import Home from "./Home";
 import './style.css';
-import BackgroundImage from "./assets/images/background.jpg";
+import BackgroundImage from "./assets/images/background.avif";
 import Menu from "./Menu";
 import About from "./About";
 

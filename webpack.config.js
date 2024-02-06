@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -34,25 +33,10 @@ const config = {
                 use: [stylesHandler,'css-loader'],
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpe?g|png|gif|svg|avif)$/i,
                 type: "asset",
             },
         ],
-    },
-    optimization: {
-        minimizer: [
-            "...",
-            new ImageMinimizerPlugin({
-                minimizer: {
-                    implementation: ImageMinimizerPlugin.imageminMinify,
-                    options: {
-                        plugins: [
-                            ["mozjpeg", { quality: 50 }],
-                        ]
-                    }
-                }
-            })
-        ]
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],

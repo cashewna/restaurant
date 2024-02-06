@@ -50,9 +50,22 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
+    color: white;
     
     .store-intro,
     .opening-hours {
         color: var(--50);
+    }
+    
+    .menu-list {
+        color: white;
+        padding: 0;
+        li {
+            list-style: none;
+        }
+    }
+    
+    p {
+        max-width: 80ch;
     }
 }
