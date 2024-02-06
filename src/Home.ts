@@ -1,4 +1,6 @@
-class InitialPageLoad {
+import Page from "./Page";
+
+class Home implements Page {
     #domElement: HTMLElement;
     #storeName: string;
     #storeDescription: string;
@@ -11,7 +13,8 @@ class InitialPageLoad {
         this.#storeDescription = storeDescription;
     }
 
-    public render() {
+    public render(): void {
+        this.#domElement.innerHTML = "";
         const storeIntroDiv = document.createElement("div");
         storeIntroDiv.classList.add("store-intro");
         const storeHeader = document.createElement("h1");
@@ -50,4 +53,4 @@ class InitialPageLoad {
     }
 }
 
-export default InitialPageLoad;
+export default Home;
